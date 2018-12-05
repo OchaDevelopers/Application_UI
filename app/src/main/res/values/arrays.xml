@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item >Security Question</item>
+        <item >Whats your father name?</item>
+        <item >What high school did you go to?</item>
+        <item >Whats your favorite food?</item>
+        <item >What city did you live in when you were young?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <ImageButton
+        android:id="@+id/ootd"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ootd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/ootd_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="ootd"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ootd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.26"/>
+
+    <ImageButton
+        android:id="@+id/chatbot"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/chatbot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/chatbot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="chatbot"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatbot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.25"/>
+
+    <ImageButton
+        android:id="@+id/alarm"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/alarm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.8"/>
+
+    <TextView
+        android:id="@+id/alarm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="alarm"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.74"/>
+
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/setting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.8"/>
+
+    <TextView
+        android:id="@+id/setting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="setting"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.74"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

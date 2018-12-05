@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+
+    <ImageView
+        android:id="@+id/logom"
+        android:layout_width="260dp"
+        android:layout_height="227dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/signin"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logom"
+        app:layout_constraintVertical_bias="0.95"
+        app:srcCompat="@drawable/signin" />
+
+    <ImageButton
+        android:id="@+id/signup"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/find"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logom"
+        app:layout_constraintVertical_bias="0.95"
+        app:srcCompat="@drawable/signup" />
+
+    <Button
+        android:id="@+id/find"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:text="Forgot the password?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logom"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+</android.support.constraint.ConstraintLayout>

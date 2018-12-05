@@ -14,7 +14,7 @@ public class SplashActivity extends Activity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        startActivity(new Intent(this, Login.class));
+        startActivity(new Intent(this, Main.class));
         finish();
     }
 }

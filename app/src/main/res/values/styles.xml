@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#91a8d0</item>
-        <item name="colorPrimaryDark">#91a8d0</item>
-        <item name="colorAccent">#f7cac9</item>
+        <item name="colorPrimary">#7289b1</item>
+        <item name="colorPrimaryDark">#7289b1</item>
+        <item name="colorAccent">#91a8d0</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">#034f84</item>
     </style>
@@ -18,6 +18,7 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">@drawable/splash</item>
     </style>

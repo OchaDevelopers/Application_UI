@@ -13,21 +13,16 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ImageButton signin = (ImageButton) findViewById(R.id.signin);
-        ImageButton signup = (ImageButton) findViewById(R.id.signup);
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, weather.class);
+                Intent intent = new Intent(Login.this, Menu.class);
                 startActivity(intent);
             }
         });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Signup.class);
-                startActivity(intent);
-            }
-        });
+
+        
+
     }
 }
