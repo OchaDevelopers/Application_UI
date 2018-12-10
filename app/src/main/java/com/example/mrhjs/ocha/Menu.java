@@ -96,7 +96,6 @@ public class Menu extends AppCompatActivity {
         }
         Recommand_data data_o = new Recommand_data();
         recommand(recommend_o, 0);
-        //Log.i("recommend:", url.get(0)+" "+ url.get(1));
 
         ootd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,8 +143,6 @@ public class Menu extends AppCompatActivity {
         loginCall_function.enqueue(new Callback<Recommand_data>() {
             @Override
             public void onResponse(Call<Recommand_data> call, Response<Recommand_data> response) {
-                Log.i("responseMenu", response.body().keyword);
-
                 url.add(response.body().keyword.split(",")[0]);
                 shop_url.add(response.body().keyword.split(",")[1]);
                 int count_temp;

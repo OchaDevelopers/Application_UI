@@ -25,25 +25,6 @@ public class Main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //데이터 통신 예제!!!
-       /* signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Data data = new Data();
-                Call<Data> loginCall = networkService.newContent(data);
-                loginCall.enqueue(new Callback<Data>() {
-                      @Override
-                      public void onResponse(Call<Data> call, Response<Data> response) {
-                          Toast.makeText(Main.this, "hello", Toast.LENGTH_SHORT).show();
-                      }
-                      @Override
-                      public void onFailure(Call<Data> call, Throwable t) {
-
-                      }
-                  });
-
-            }
-        });*/
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

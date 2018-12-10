@@ -48,10 +48,9 @@ public class Find_password extends AppCompatActivity {
                     }
                     @Override
                     public void onFailure(Call<Find_Data> call, Throwable t) {
-
+                        Toast.makeText(Find_password.this, "Check your Network", Toast.LENGTH_SHORT).show();
                     }
                 });
-
             }
         });
         done.setOnClickListener(new View.OnClickListener(){

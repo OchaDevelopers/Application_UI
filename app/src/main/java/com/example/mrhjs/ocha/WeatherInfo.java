@@ -21,7 +21,6 @@ public class WeatherInfo {
 
     public WeatherInfo(JSONObject object) {
         try {
-            //JSONObject json_main = object.getJSONObject("main");
             for (int i=0;i<3;i++) {
                 JSONArray getList = object.getJSONArray("list");
                 JSONObject lOne = getList.getJSONObject(i);
@@ -33,20 +32,6 @@ public class WeatherInfo {
                 weatherDescription[i]=get2.getString("description");
                 nowTemp[i] = getMain.getString("temp");
             }
-            /*
-            nowTemp = json_main.getString("temp");
-            humidity = json_main.getString("humidity");
-            minTemp = json_main.getString("temp_min");
-            maxTemp = json_main.getString("temp_max");
-           // main = json_main.getString("main");
-
-            JSONArray json_weather = object.getJSONArray("weather");
-            //iconName=json_weather.getJSONObject(0).getString("icon");
-
-            JSONObject json_wind = object.getJSONObject("wind");
-            speed = String.valueOf(json_wind.getDouble("speed"));
-                    //.getString("speed");*/
-            //description =json_weather.getJSONObject("description").getString("description");
         }catch (Exception e)
         {
 
@@ -59,12 +44,6 @@ public class WeatherInfo {
                 +"id: " +getWeatherId()[1]+"\n"
                 +"description: " +getWeatherDescription()[1]+"\n"
                 +"main: " +getWeatherMain()[1]+"\n";
-                /*
-                 "nowTemp : "+ getNowTemp()+"\n"
-                +"humidity : "+ getHumidity()+"\n"
-                +"speed : "+ getSpeed()+"\n" ;
-               // +"description : "+ getDescription()+"\n";
-               */
         return ToString;
     }
 

@@ -5,7 +5,6 @@ public class Recommand_data {
     public String getKeyword() {
         return keyword;
     }
-
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }

@@ -3,7 +3,6 @@ package com.example.mrhjs.ocha;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -56,9 +55,7 @@ public class Signup extends AppCompatActivity {
                 loginCall.enqueue(new Callback<Signup_data>() {
                     @Override
                     public void onResponse(Call<Signup_data> call, Response<Signup_data> response) {
-
                         response.body();
-                        Log.i("response", response.body().toString());
                         if (response.body().getId().equals(data.id)) {
                             Toast.makeText(Signup.this, "Success", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Signup.this, Main.class);
@@ -66,14 +63,12 @@ public class Signup extends AppCompatActivity {
                         } else {
                             Toast.makeText(Signup.this, "Please check your information", Toast.LENGTH_SHORT).show();
                         }
-
                     }
                     @Override
                     public void onFailure(Call<Signup_data> call, Throwable t) {
                         Toast.makeText(Signup.this, "Please check your information", Toast.LENGTH_SHORT).show();
                     }
                 });
-
             }
         });
         Spinner s = (Spinner)findViewById(R.id.question);

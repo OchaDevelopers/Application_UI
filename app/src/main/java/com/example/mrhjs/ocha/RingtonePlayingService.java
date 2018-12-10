@@ -13,7 +13,6 @@ import android.os.IBinder;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 public class RingtonePlayingService extends Service {
 
@@ -72,9 +71,7 @@ public class RingtonePlayingService extends Service {
         if(!this.isRunning && startId == 1) {
 
             mediaPlayer = MediaPlayer.create(this,R.raw.alarm1);
-            //ttsGreater21("hello");
             //mediaPlayer.start();
-
             Intent intentc= new Intent(RingtonePlayingService.this, Chatbot.class);
             intentc.putExtra("alarm", "일어날 시간입니다.");
             startActivity(intentc);
@@ -100,10 +97,8 @@ public class RingtonePlayingService extends Service {
             this.startId = 0;
 
         }
-
         // 알람음 재생 O , 알람음 시작 버튼 클릭
         else if(this.isRunning && startId == 1){
-
             this.isRunning = true;
             this.startId = 1;
         }
@@ -116,8 +111,6 @@ public class RingtonePlayingService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        Log.d("onDestory() 실행", "서비스 파괴");
 
     }
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

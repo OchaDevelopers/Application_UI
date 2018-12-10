@@ -13,7 +13,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -109,7 +108,6 @@ public class Chatbot extends AppCompatActivity implements View.OnClickListener {
      * AIRequest should have query OR event
      */
     private void sendRequest(String text) {
-        Log.d(TAG, text);
         final String queryString = String.valueOf(text);
         final String eventString = null;
         final String contextString = null;
@@ -232,8 +230,6 @@ public class Chatbot extends AppCompatActivity implements View.OnClickListener {
                 if (params != null && !params.isEmpty()) {
 
                     for (final Map.Entry<String, JsonElement> entry : params.entrySet()) {
-                        Log.i(TAG, String.format("%s: %s",
-                                entry.getKey(), entry.getValue().toString()));
                     }
                 }
 
@@ -257,7 +253,6 @@ public class Chatbot extends AppCompatActivity implements View.OnClickListener {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Log.e(TAG,error.toString());
             }
         });
     }

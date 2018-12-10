@@ -44,11 +44,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Check your network", Toast.LENGTH_SHORT).show();
                     }
                 });
-
             }
         });
-
-        
-
     }
 }

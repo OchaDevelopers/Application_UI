@@ -44,48 +44,18 @@ public class ApplicationController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        /**
-         * 어플이 실행되자마자 ApplicationController가 실행됩니다.
-         * 자신의 instance를 생성하고 networkService를 만들어줍니다.
-         */
-
         ApplicationController.instance = this;
         this.buildService();
-
-
     }
-
-
-//    public void getUUID(){
-//        TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-//        String device = "" + manager.getDeviceId();
-//        String androidId = "" + android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID );
-//        UUID uuid = new UUID(androidId.hashCode(), ((long) device.hashCode() <<32));
-//        deviceid =  uuid.toString();
-//    }
-
-
     private void buildService() {
-
         synchronized (ApplicationController.class)
 
         {
             {
-                /**
-                 * 이제 NetworkService를 만들어줘야 합니다.
-                 * 위에서 작성했던 코드들이 이미 있던 요청에 무언가를 바꿔주는 것이라면
-                 * 지금 작성하는 코드는 Retrofit 객체를 사용하여 통신을 위해 필요한
-                 * NetworkService를 만드는 과정입니다.
-                 * baseUrl이 있어야 하고, JSON으로 받아온 데이터를 객체로 변환해주는 GsonConverterFactory가 필요합니다.
-                 * 위에서 만든 interceptor는 client 객체의 메소드였죠? 따라서 위에서 만든 client를 해당 네트워크의 클라이언트로 설정합니다.
-                 */
                 Gson gson = new GsonBuilder()
                         .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
                         .create();
-
                 GsonConverterFactory factory = GsonConverterFactory.create(gson);
-
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl(baseUrl)
                         .addConverterFactory(factory)
@@ -97,7 +67,6 @@ public class ApplicationController extends Application {
             }
         }
     }
-
     public void setToken(String token) {
         this.token = token;
     }
