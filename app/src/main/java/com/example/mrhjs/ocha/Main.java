@@ -1,8 +1,8 @@
 package com.example.mrhjs.ocha;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -25,8 +25,8 @@ public class Main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /* 데이터 통신 예제!!!
-        signin.setOnClickListener(new View.OnClickListener() {
+        //데이터 통신 예제!!!
+       /* signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Data data = new Data();

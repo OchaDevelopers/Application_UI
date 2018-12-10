@@ -8,6 +8,15 @@ import retrofit2.http.POST;
 public interface  NetworkService {
 
     @Headers("Content-Type:application/json")
-    @POST("/")
-    Call<Data> newContent(@Body Data content);
+    @POST("/memberReg")
+    Call<Signup_data> newContent(@Body Signup_data content);
+    @Headers("Content-Type:application/json")
+    @POST("/findPassword")
+    Call<Find_Data> newContentfind(@Body Find_Data content);
+    @Headers("Content-Type:application/json")
+    @POST("/login")
+    Call<Signin_data> newContentin(@Body Signin_data content);
+    @Headers("Content-Type:application/json")
+    @POST("/recommend")
+    Call<Recommand_data> newContentre(@Body Recommand_data content);
 }

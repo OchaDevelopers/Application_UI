@@ -1,5 +1,6 @@
 package com.example.mrhjs.ocha;
 
+import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.IBinder;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -18,6 +20,7 @@ public class RingtonePlayingService extends Service {
     MediaPlayer mediaPlayer;
     int startId;
     boolean isRunning;
+    TextToSpeech tts;
 
     @Nullable
     @Override
@@ -41,7 +44,6 @@ public class RingtonePlayingService extends Service {
                     .setContentTitle("알람시작")
                     .setContentText("알람음이 재생됩니다.")
                     .setSmallIcon(R.mipmap.ic_launcher)
-
                     .build();
 
             startForeground(1, notification);
@@ -70,8 +72,12 @@ public class RingtonePlayingService extends Service {
         if(!this.isRunning && startId == 1) {
 
             mediaPlayer = MediaPlayer.create(this,R.raw.alarm1);
-            mediaPlayer.start();
+            //ttsGreater21("hello");
+            //mediaPlayer.start();
 
+            Intent intentc= new Intent(RingtonePlayingService.this, Chatbot.class);
+            intentc.putExtra("alarm", "일어날 시간입니다.");
+            startActivity(intentc);
             this.isRunning = true;
             this.startId = 0;
         }
@@ -113,5 +119,10 @@ public class RingtonePlayingService extends Service {
 
         Log.d("onDestory() 실행", "서비스 파괴");
 
+    }
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void ttsGreater21(String text) {
+        String utteranceId=this.hashCode() + "";
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
     }
 }

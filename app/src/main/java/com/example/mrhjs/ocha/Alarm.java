@@ -10,7 +10,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -27,10 +27,11 @@ public class Alarm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
-
+        super.setTitle("Alarm");
         android.support.v7.widget.Toolbar mToolbar = findViewById(R.id.alarm_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         this.context = this;
 
         // 알람매니저 설정
@@ -46,7 +47,7 @@ public class Alarm extends AppCompatActivity {
         final Intent my_intent = new Intent(this.context, Alarm_Receiver.class);
 
         // 알람 시작 버튼
-        Button alarm_on = findViewById(R.id.btn_start);
+        ImageButton alarm_on = findViewById(R.id.btn_start);
         alarm_on.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
@@ -74,7 +75,7 @@ public class Alarm extends AppCompatActivity {
         });
 
         // 알람 정지 버튼
-        Button alarm_off = findViewById(R.id.btn_finish);
+        ImageButton alarm_off = findViewById(R.id.btn_finish);
         alarm_off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

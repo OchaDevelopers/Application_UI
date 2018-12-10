@@ -29,11 +29,13 @@
                 android:textStyle="bold"
                 android:paddingLeft="15dp"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/overcoat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/overcoat"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -52,11 +54,13 @@
                 android:paddingLeft="15dp"
                 android:text="Top" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/top"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/top"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -76,11 +80,13 @@
                 android:paddingLeft="15dp"
                 android:text="Pants" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/pants"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/pants"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -98,11 +104,13 @@
                 android:textStyle="bold"
                 android:paddingLeft="15dp"
                 android:text="Shoes" />
-            <ImageView
+            <ImageButton
                 android:id="@+id/shoes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/shoes"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -121,11 +129,13 @@
                 android:textStyle="bold"
                 android:paddingLeft="15dp"
                 android:text="Acc" />
-            <ImageView
+            <ImageButton
                 android:id="@+id/acc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/acc"
                 android:layout_gravity="center"/>
         </LinearLayout>

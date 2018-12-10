@@ -1,7 +1,6 @@
 package com.example.mrhjs.ocha;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -33,7 +32,7 @@ public class ApplicationController extends Application {
     }
 
     //통신할 서버의 주소입니다. 클라이언트는 이 주소에 query 또는 path 등을 추가하여 요청합니다.
-    private static final String baseUrl = "http://54.186.60.112:3001";
+    private static final String baseUrl = "http://54.186.60.112:3006";
 
     //NetworkService도 마찬가지로 Application을 상속받은 ApplicationController 내에서 관리해주는 것이 좋습니다.
     private NetworkService networkService;
@@ -51,7 +50,6 @@ public class ApplicationController extends Application {
          * 자신의 instance를 생성하고 networkService를 만들어줍니다.
          */
 
-        Log.i("MyTag", "가장 먼저 실행");
         ApplicationController.instance = this;
         this.buildService();
 

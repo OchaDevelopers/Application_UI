@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu">
+    tools:context=".Menu"
+    android:background="#f5ebdc">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu"
-        android:textSize="50dp"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="293dp"
+        android:layout_height="160dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"/>
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/menu" />
 
     <ImageButton
         android:id="@+id/ootd"
@@ -36,7 +38,7 @@
         android:id="@+id/ootd_text"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="ootd"
+        android:text="Ootd."
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -63,7 +65,7 @@
         android:id="@+id/chatbot_text"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="chatbot"
+        android:text="Chatbot"
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -90,7 +92,7 @@
         android:id="@+id/alarm_text"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="alarm"
+        android:text="Alarm"
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -100,12 +102,12 @@
         app:layout_constraintHorizontal_bias="0.74"/>
 
     <ImageButton
-        android:id="@+id/setting"
+        android:id="@+id/preference"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/setting"
+        app:srcCompat="@drawable/preference"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -114,18 +116,17 @@
         app:layout_constraintHorizontal_bias="0.8"/>
 
     <TextView
-        android:id="@+id/setting_text"
+        android:id="@+id/preference_text"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:text="setting"
+        android:text="Preference"
         android:textSize="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/setting"
+        app:layout_constraintTop_toBottomOf="@id/preference"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.74"/>
-
+        app:layout_constraintHorizontal_bias="0.77"/>
 
 
 </android.support.constraint.ConstraintLayout>
