@@ -61,37 +61,37 @@ public class Menu extends AppCompatActivity {
         p = pattern.size();
         t = texture.size();
 
-        recommend_o = "M, -3C, , coat, Black,,";
-        recommend_t = "M, -3C, , top, white,,";
-        recommend_p = "M, -3C, , pants, blue,,";
-        recommend_s = "M, -3C, , shoes, white,,";
-        recommend_a = "M, -3C, snow , scarf, black,,";
+        recommend_o = "M, "+Integer.parseInt(temperature)+"C, , coat, Black,,";
+        recommend_t = "M, "+Integer.parseInt(temperature)+"C, , top, white,,";
+        recommend_p = "M, "+Integer.parseInt(temperature)+"C, , pants, blue,,";
+        recommend_s = "M, "+Integer.parseInt(temperature)+"C, , shoes, white,,";
+        recommend_a = "M, "+Integer.parseInt(temperature)+"C, snow , scarf, black,,";
         if (tag == 1) {
             int rand = (int) (Math.random() * 2) + 1;
             if (rand == 1) {
-                recommend_o = "M, -3C, , padding, Black,,";
+                recommend_o = "M, "+Integer.parseInt(temperature)+"C, , padding, Black,,";
             } else {
-                recommend_o = "M, -3C, , coat, Black,,";
+                recommend_o = "M, "+Integer.parseInt(temperature)+"C, , coat, Black,,";
             }
             rand = (int) (Math.random() * c);
             int randp = (int) (Math.random() * p);
             int randt = (int) (Math.random() * t);
-            recommend_t = "M, -3C, , top, "+color.get(rand)+","+pattern.get(randp)+","+texture.get(randt)+"";
+            recommend_t = "M, "+Integer.parseInt(temperature)+"C, , top, "+color.get(rand)+","+pattern.get(randp)+","+texture.get(randt)+"";
             rand = (int) (Math.random() * 2) + 1;
             if (rand == 1) {
-                recommend_p = "M, -3C, , pants, brown, cotton,";
+                recommend_p = "M, "+Integer.parseInt(temperature)+"C, , pants, brown, cotton,";
             } else {
-                recommend_p = "M, -3C, , pants, blue, denim,";
+                recommend_p = "M, "+Integer.parseInt(temperature)+"C, , pants, blue, denim,";
             }
             rand = (int) (Math.random() * 2) + 1;
             if (rand == 1) {
-                recommend_s = "M, -3C, , shoes, black,,";
+                recommend_s = "M, "+Integer.parseInt(temperature)+"C, , shoes, black,,";
             } else {
-                recommend_s = "M, -3C, , shoes, white,,";
+                recommend_s = "M, "+Integer.parseInt(temperature)+"C, , shoes, white,,";
             }
             recommend_a = "M, -3C, , scarf, black,,";
             if (weather_description.contains("snow")) {
-                recommend_a = "M, -3C, , umbrella, black,,";
+                recommend_a = "M, "+Integer.parseInt(temperature)+"C, , umbrella, black,,";
             }
         }
         Recommand_data data_o = new Recommand_data();
